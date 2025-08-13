@@ -1,70 +1,69 @@
-# Getting Started with Create React App
+# 🐦 solidity-twitter-dapp - Decentralized Twitter on Ethereum
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A fully decentralized social media platform built on Ethereum blockchain that replicates Twitter's core functionality with Web3 features. Users can create profiles, post tweets, and engage through likes in a censorship-resistant environment.
 
-## Available Scripts
+![Solidity](https://img.shields.io/badge/Solidity-^0.8.0-363636?style=flat&logo=solidity)
+![React](https://img.shields.io/badge/React-18.x-61DAFB?style=flat&logo=react)
+![Web3](https://img.shields.io/badge/Web3.js-1.8.x-F16822?style=flat&logo=web3.js)
+![Ethereum](https://img.shields.io/badge/Ethereum-Sepolia-627EEA?style=flat&logo=ethereum)
+![MetaMask](https://img.shields.io/badge/MetaMask-Required-F6851B?style=flat&logo=metamask)
 
-In the project directory, you can run:
+## ✨ Key Features
 
-### `npm start`
+### 🔐 **Wallet Integration**
+- **MetaMask Connection**: Seamless wallet connectivity with one-click setup
+- **Network Detection**: Automatic Sepolia testnet switching and configuration
+- **Account Management**: Secure account handling with persistent sessions
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 👤 **User Profiles**
+- **Profile Creation**: Set custom display names and biographical information
+- **On-Chain Storage**: All profile data stored permanently on blockchain
+- **Profile Verification**: Automatic profile existence checking before app usage
+- **Address Shortening**: Clean UI with shortened wallet addresses or display names
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 📝 **Tweet Management**
+- **Create Tweets**: Post messages with smart contract-enforced character limits
+- **Chronological Feed**: Tweets automatically sorted by timestamp (newest first)
+- **Persistent Storage**: All tweets permanently stored on Ethereum blockchain
+- **Gas-Optimized**: Efficient smart contract interactions to minimize transaction costs
 
-### `npm test`
+### ❤️ **Social Interactions**
+- **Like System**: Like and unlike tweets with transparent vote counting
+- **Real-time Updates**: Instant like count updates after transactions
+- **User Engagement**: Track social interactions with on-chain transparency
+- **Duplicate Prevention**: Smart contract prevents duplicate likes from same user
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### ⚡ **User Experience**
+- **Loading States**: Visual feedback during blockchain transactions
+- **Error Handling**: Comprehensive error management for failed operations
+- **Responsive Design**: Optimized for both desktop and mobile devices
+- **Gas Estimation**: Transaction cost preview before execution
 
-### `npm run build`
+## 🏗️ Architecture
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Smart Contract Layer
+📦 Smart Contracts
+├── 🐦 Twitter Contract (main.json)
+│ ├── createTweet() # Post new tweets
+│ ├── getAllTweets() # Retrieve user tweets
+│ ├── likeTweet() # Like specific tweets
+│ ├── unlikeTweet() # Remove likes
+│ └── changeTweetLength() # Admin function
+└── 👤 Profile Contract (user.json)
+├── setProfile() # Create/update profiles
+└── getProfile() # Retrieve profile data
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Frontend Architecture
+🎨 React Components
+├── App.js # Main application state
+├── Connect.js # Wallet connection logic
+├── ProfileCreation.js # User onboarding
+├── AddTweet.js # Tweet composition
+└── Tweets.js # Tweet feed display
 
-### `npm run eject`
+### Installation & Setup
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. **Clone and Install**
+2. **npm Install**
+3. **npm start**
